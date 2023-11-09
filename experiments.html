@@ -3,8 +3,32 @@
 <head>
     <title>Experiments</title>
     <link rel="icon" href="/images/ucsd-logo-png-transparent.png">
-    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side_nav.css">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        canvas {
+            transform: translate(10rem, 3rem) rotate(45deg);
+        }
+        input[type="submit"] {
+            font-size : 1rem;
+            transition : font-size 2s;
+        }
+        input[type="submit"]:hover {
+            font-size : 5rem;
+        }
+        input {
+            width : auto;
+            height : 1rem;
+        }
+        input:focus {
+            width : 3rem;
+            height : 2rem;
+        }
+
+    </style>
 </head>
+
 
 <body>
     <header>
@@ -28,7 +52,6 @@
     
     <button onclick="showText()" title="print a 'Hello' at the bottom of the page">Click Me</button>
     <template id="hidden_text">Hello</template>
-
     <script>
         function showText() {
             let text = document.getElementById("hidden_text");
@@ -51,6 +74,7 @@
     </form>
 
 <hr>
+
 
 <canvas title="an orange square..." id="my_canvas" width="200" height="200"></canvas>
     <script>
@@ -132,10 +156,8 @@
     <h2>Other Pages</h2>
     <ul>
         <li><a href="/about.html">About Me</a></li>
-        <li><a href="/academic_background.html">Academic Background</a></li>
         <li><a href="/projects.html">Projects</a></li>
         <li><a href="/hobbies.html">Hobbies</a></li>
-        <li><a href="/contacts.html">Contacts</a></li>
         <li><a href="/external_links.html">External Links</a></li>
     </ul>
 </footer>

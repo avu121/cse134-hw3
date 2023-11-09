@@ -3,17 +3,71 @@
 <head>
     <title>Projects</title>
     <link rel="icon" href="/images/ucsd-logo-png-transparent.png">
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side_nav.css">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">   
+
+    <style>
+        @media (max-width : 768px) {
+            ol {
+                font-size : 3dvh;
+            }
+        }
+        @media (max-width : 480px) {
+            ol {
+                font-size : 4dvh;
+            }
+        }
+        ul > li {
+            line-height : 1.5;
+            max-width : 70ch;
+            font-size : 1rem;
+        }
+        ol > li {
+            margin-bottom : 2rem;
+            font-size : 1.2rem;
+        }
+        .wrapper {
+            display : grid;
+            grid-template-columns : .05fr 1fr;
+            grid-template-rows : .25fr repeat(5, .3fr);
+            column-gap : 2rem;
+            row-gap : 2rem;
+        }
+        .wrapper nav {
+            grid-column : 1;
+            grid-row : 2;
+
+        }
+        .wrapper h1 {
+            grid-column : 1 / 3;
+            grid-row : 1 / 2;
+            background-color: rgba(59, 47, 47, .8);
+            padding-left : 2rem;
+        }
+        .wrapper ol {
+            grid-column : 2;
+            grid-row : 2 / 6;
+        }
+        li:has(iframe) {
+            border : 1px solid black;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <div><a href="/"><b>Home</b></a></div>
-    </header>
-
+<body class="wrapper">
     <h1>Projects</h1>
+    <nav>
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Me</a></li>
+            <li><a href="/hobbies.html">Hobbies</a></li>
+            <li><a href="/external_links.html">External Links</a></li>
+            <li><a href="/experiments.html" id="experimental">Experiments</a></li>
+        </ul>  
+    </nav>
     <ol>
-        <li><em>Zooseeker Project (April 2022 - May 2022)</em>
+        <li id="proj1"><em>Zooseeker Project (April 2022 - May 2022)</em>
             <ul>
                 <li>Collaborated with 5 team members to create an Android app 
                     that offers simple and intuitive exhibit planning and pathfinding 
@@ -28,7 +82,7 @@
             </ul>
         </li>
 
-        <li><em>Microprocessor Design Project (January 2023 - March 2023)</em>
+        <li id="proj2"><em>Microprocessor Design Project (January 2023 - March 2023)</em>
             <ul>
                 <li>
                     Collaborated with 2 team members to create a virtual, register-to-register type
@@ -45,7 +99,7 @@
             </ul>
         </li>
 
-        <li><em>Nachos OS Project (April 2023 - June 2023)</em>
+        <li id="proj3"><em>Nachos OS Project (April 2023 - June 2023)</em>
             <ul>
                 <li>
                     Collaborated with 3 team members to create a comprehensive operating 
@@ -60,32 +114,19 @@
             </ul>
         </li>
 
-        <li><em>Personal Portfolio Website (October 2023 - <strong>Ongoing</strong>)</em>
+        <li id="proj4"><em>Personal Portfolio Website (October 2023 - <strong>Ongoing</strong>)</em>
             <ul>
-                <li>Created a website showcasing my HTML skills and knowledge...</li>
-                <li>wrote each page's HTML code</li>
-                <li>Skills and Technologies used: HTML, GitHub, Netlify, Visual Studio Code</li>
+                <li>Created a website showcasing my HTML and CSS skills</li>
+                <li>wrote each page's HTML and CSS code</li>
+                <li>Skills and Technologies used: HTML, CSS, GitHub, Netlify, Visual Studio Code</li>
             </ul>
-            <aside><b>CSS and JavaScript coming soon</b></aside>
-            <iframe src="/" width="300" height="200"></iframe>
+            <aside><b>JavaScript coming soon!</b></aside>
+            <h2 style="margin-top : 2rem;">Website Preview:</h2>
+            <iframe src="/" width="300" height="200" title="preview of website"></iframe>
         </li>
-        
     </ol>
-
-
     <footer>
-        <hr>
-        <h3>Other Pages</h3>
-        <ul>
-            <li><a href="/about.html">About Me</a></li>
-            <li><a href="/academic_background.html">Academic Background</a></li>
-            <li><a href="/hobbies.html">Hobbies</a></li>
-            <li><a href="/contacts.html">Contacts</a></li>
-            <li><a href="/external_links.html">External Links</a></li>
-            <li><a href="/experiments.html">Experiments</a></li>
-        </ul>   
+        <a id="top" href="#">Back to Top</a>
     </footer>
 </body>
-
-
 </html>
